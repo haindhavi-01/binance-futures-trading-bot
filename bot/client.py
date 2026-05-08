@@ -1,7 +1,11 @@
+import os
+from dotenv import load_dotenv
 from binance.client import Client
 
-API_KEY = "HIQsGRqgCV2zh1wWklAt8Goe7BFYzeUT6ghAOtpzGB0WrPta3iLiVUt16E8ykpBg"
-API_SECRET = "J7t05DkpbEvMFNiroLwJ3S27jw1boBpbB3LEKkyd0PefEm83s475CyiacWmNDjGI"
+load_dotenv()
+
+API_KEY = os.getenv("API_KEY")
+API_SECRET = os.getenv("API_SECRET")
 
 client = Client(API_KEY, API_SECRET)
 
